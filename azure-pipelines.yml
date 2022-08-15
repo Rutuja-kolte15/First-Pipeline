@@ -1,0 +1,22 @@
+# Python Package
+#Create and Test a python Package 
+
+trigger:
+  -master
+  
+ pool:
+  vmImage: 'ubuntu-latest'
+ strategy:
+  matrix:
+    python27:
+      python.version: '2.7'
+     pyhton35:
+      python.version: '3.5'
+      
+  steps:
+    -task: usePythonVersion@0
+    inputs:
+      versionSpec: '$(python.version)'
+     displayName: 'Use Python $(python.version)'
+     
+   -script: python hello_pipeline.py
