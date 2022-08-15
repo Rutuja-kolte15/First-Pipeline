@@ -6,7 +6,7 @@ trigger:
   
 pool:
   vmImage: 'ubuntu-latest'
- strategy:
+strategy:
   matrix:
     python27:
       python.version: '2.7'
