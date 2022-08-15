@@ -10,7 +10,7 @@ strategy:
   matrix:
     python27:
       python.version: '2.7'
-     pyhton35:
+    pyhton35:
       python.version: '3.5'
       
   steps:
